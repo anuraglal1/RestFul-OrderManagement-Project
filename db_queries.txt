@@ -1,0 +1,45 @@
+create database infinity;
+show databases;
+
+use infinity;
+
+CREATE TABLE Persons (
+    CustomerID int,
+    Name varchar(255),
+    Address varchar(255),
+    Email varchar(255),
+    Contact int,
+    PRIMARY KEY (CustomerID)
+);
+
+ALTER TABLE Customer RENAME TO infinity_customer;
+desc infinity_customer;
+desc infinity_order;
+desc infinity_product;
+
+CREATE TABLE infinity_order (
+    OrderID int,
+    product_id varchar(255),
+    customer_id varchar(255),
+    order_type varchar(255),
+    PRIMARY KEY (OrderID)
+);
+
+CREATE TABLE infinity_product (
+    product_id varchar(255),
+    product_name varchar(255),
+    product_descr varchar(255),
+    PRIMARY KEY (product_id)
+);
+
+ALTER TABLE infinity_product
+MODIFY COLUMN  product_id int;
+
+ALTER TABLE infinity_order 
+RENAME COLUMN OrderID TO order_id;
+
+ALTER TABLE infinity_customer
+drop column contact;
+
+ALTER TABLE infinity_customer 
+ADD contact varchar(255)  NOT NULL;
