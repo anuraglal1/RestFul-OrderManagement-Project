@@ -1,2 +1,2 @@
 # RestFul-OrderManagement-Project
-Tech Stack used: SpringBoot, Rest APIs, JAVA etc.
+Tech Stack used: SpringBoot, Rest APIs, JAVA, MySQL etc
