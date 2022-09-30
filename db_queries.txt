@@ -5,9 +5,9 @@ use infinity;
 
 CREATE TABLE Persons (
     CustomerID int,
-    Name varchar(255),
-    Address varchar(255),
-    Email varchar(255),
+    Name varchar(60),
+    Address varchar(120),
+    Email varchar(120),
     Contact int,
     PRIMARY KEY (CustomerID)
 );
